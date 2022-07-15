@@ -1,0 +1,14 @@
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  name: mod
+  labels:
+    apps.tanzu.vmware.com/workload-type: web
+    app.kubernetes.io/part-of: mod
+    apps.tanzu.vmware.com/has-tests: true
+spec:
+  source:
+    git:
+      url: https://github.com/simonjjones/paketo-samples/go/mod
+      ref:
+        branch: main
